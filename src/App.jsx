@@ -51,7 +51,7 @@ function App() {
   {
     id: 7,
     description: "Eso no dice piensa tu corazón.",
-    img: "https://i.pinimg.com/originals/db/aa/c1/dbaac13f6278b91a15e480752b8a7242.gif"
+    img: "https://i.pinimg.com/originals/48/df/d3/48dfd30f252f51fed4d82b639c746459.gif"
   },
   {
     id: 8,
