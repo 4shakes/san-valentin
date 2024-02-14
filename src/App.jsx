@@ -79,7 +79,7 @@ function App() {
       {
         !valueSi ? (
           <div className="p-5">
-            <h1 className="text-white font-bold text-5xl text-center">¿Feliz San Valentin, me extrañas?</h1>
+            <h1 className="text-white font-bold text-5xl text-center">¿Feliz San Valentin puerquita :3, me extrañas?</h1>
             <img src={Object.keys(randomValor).length === 0 ?
               "https://i.pinimg.com/originals/df/90/4e/df904e08ce53360d1d2b831def2ff8e7.gif" : randomValor.img} alt="San Valentin" className="mx-auto" width={400} height={400} />
             <div className="flex justify-center items-center flex-wrap gap-3">
