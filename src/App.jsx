@@ -15,72 +15,62 @@ function App() {
   let random = [{
     id: 1,
     description: "Di si por favor",
-    img: "https://i.pinimg.com/originals/db/aa/c1/dbaac13f6278b91a15e480752b8a7242.gif"
+    img: "https://i.pinimg.com/originals/40/99/a6/4099a64d4819ba8c7ac7c95687947a4a.gif"
   },
   {
     id: 1,
     description: "Piénsalo de nuevo.",
-    img: "https://i.pinimg.com/originals/77/6b/21/776b215bed3deeef47fd3aa657685a18.gif"
+    img: "https://i.pinimg.com/originals/50/d0/bc/50d0bce51f01a8cfd786f06bd108bc33.gif"
   }
     ,
   {
     id: 2,
     description: "Vamos, atrévete a decir que sí.",
-    img: "https://www.gifmaniacos.es/wp-content/uploads/2019/05/gatitos-kawaii-gifmaniacos.es-19.gif"
+    img: "https://i.pinimg.com/originals/ca/a4/a6/caa4a69818428c5535e362e8d482c59f.gif"
   },
   {
     id: 3,
-    description: "No tengas miedo, será genial.",
-    img: "https://i.pinimg.com/originals/e1/c3/88/e1c388133e0f998e25bb17c837b74a14.gif"
+    description: "No, ni un poquito :P",
+    img: "https://i.pinimg.com/originals/94/42/5c/94425ce994f3608d7393b337bf08335e.gif"
   },
   {
     id: 4,
-    description: "Confía en mí, será divertido.",
-    img: "https://media.tenor.com/Bn88VELdNI8AAAAi/peach-goma.gif"
+    description: "Di sí, confía en mí, será divertido.",
+    img: "https://i.pinimg.com/originals/df/90/4e/df904e08ce53360d1d2b831def2ff8e7.gif"
   },
   {
     id: 5,
-    description: "No tengas dudas, te hará sonreír.",
-    img: "https://i.pinimg.com/originals/c6/b3/0d/c6b30d1a2dc178aeb92de63295d4ae64.gif"
+    description: "Di que sí nuestro amor es como una dulce melodía.",
+    img: "https://i.pinimg.com/originals/c6/0f/fe/c60ffe2db48f9ec653a885923ae22817.gif"
   },
   {
     id: 6,
     description: "Te prometo que será inolvidable.",
-    img: "https://media.tenor.com/N2oqtqaB_G0AAAAi/peach-goma.gif"
+    img: "https://i.pinimg.com/564x/78/9a/93/789a9367f23786090bd1cabf67c3cd2f.jpg"
   },
   {
     id: 7,
-    description: "No dejes que el miedo te detenga.",
+    description: "Eso no dice piensa tu corazón.",
     img: "https://i.pinimg.com/originals/db/aa/c1/dbaac13f6278b91a15e480752b8a7242.gif"
   },
   {
     id: 8,
-    description: "Confía en el destino, nos está dando una señal.",
-    img: "https://media.tenor.com/cbEccaK9QxMAAAAi/peach-goma.gif"
+    description: "Di que sí, por favor. Contigo, cada día es especial.",
+    img: "https://i.pinimg.com/originals/48/df/d3/48dfd30f252f51fed4d82b639c746459.gif"
   },
   {
     id: 9,
-    description: "Confía en mí.",
-    img: "https://i.pinimg.com/originals/db/aa/c1/dbaac13f6278b91a15e480752b8a7242.gif"
-  },
-  {
-    id: 10,
     description: "No te arrepentirás.",
-    img: "https://media.tenor.com/I7KdFaMzUq4AAAAi/peach-goma.gif"
+    img: "https://i.pinimg.com/originals/6e/ce/c1/6ecec1297a0acb610cfa8f5045ab92b5.gif"
   }]
 
   const randomResponse = () => {
     let index = Math.floor(Math.random() * 11);
     console.log(random[index])
     if (agrandar <= 500) {
-      setAgrandar(agrandar + 10)
+      setAgrandar(agrandar + 30)
     }
     setRandomValor(random[index]);
-  }
-
-
-  const handleImageLoad = () => {
-    setImagenCargada(true);
   }
 
 
@@ -89,10 +79,10 @@ function App() {
       {
         !valueSi ? (
           <div className="p-5">
-            <h1 className="text-white font-bold text-5xl text-center">¿Quieres ser mi San Valentin?</h1>
+            <h1 className="text-white font-bold text-5xl text-center">¿Feliz San Valentin, me extrañas?</h1>
             <img src={Object.keys(randomValor).length === 0 ?
-              "https://i.pinimg.com/originals/db/aa/c1/dbaac13f6278b91a15e480752b8a7242.gif" : randomValor.img} alt="San Valentin" className="mx-auto" width={400} height={400} />
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-5 items-center">
+              "https://i.pinimg.com/originals/df/90/4e/df904e08ce53360d1d2b831def2ff8e7.gif" : randomValor.img} alt="San Valentin" className="mx-auto" width={400} height={400} />
+            <div className="flex justify-center items-center flex-wrap gap-3">
               <button onClick={() => {
                 setValueSi(true)
 
@@ -102,7 +92,7 @@ function App() {
                   confettiNumber: 80,
                 })
 
-              }} className={`bg-green-500 text-white font-bold p-2 rounded-md text-xl h-${agrandar}`} style={{ height: agrandar }}>
+              }} className={`bg-green-500 text-white font-bold p-2 rounded-md text-xl h-${agrandar}`} style={{width:agrandar, height: agrandar,fontSize: agrandar-20+'px' }}>
                 Si
               </button>
               <button
@@ -117,9 +107,9 @@ function App() {
           </div>
         ) : (
           <div className="flex justify-center items-center flex-col space-y-10">
-            <h1 className="text-4xl text-white font-bold">Sabia que dirias que si ❤️!</h1>
-            <img src="https://i.pinimg.com/originals/9b/dc/c6/9bdcc6206c1d36a37149d31108c6bb41.gif" alt="" className="mx-auto" />
-            <span hidden>{document.title = 'Sabia que dirias que si ❤️!'}</span>
+            <h1 className="px-4 text-5xl text-white text-center font-bold">Sabia que me extrañas un montón ❤️!</h1>
+            <img src="https://i.pinimg.com/originals/2a/af/1d/2aaf1d299abd3b313765c09dee3f5a04.gif" alt="" className="mx-auto" />
+            
           </div>
         )
       }
