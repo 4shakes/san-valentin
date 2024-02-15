@@ -54,6 +54,7 @@ function App() {
     img: "https://i.pinimg.com/originals/48/df/d3/48dfd30f252f51fed4d82b639c746459.gif"
   },
   {
+    
     id: 8,
     description: "Di que sí, por favor. Contigo, cada día es especial.",
     img: "https://i.pinimg.com/originals/48/df/d3/48dfd30f252f51fed4d82b639c746459.gif"
